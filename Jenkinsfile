@@ -11,13 +11,9 @@ pipeline {
                 sh 'ls *'
             }
         }
-        stage('Change permission of the script file') {
+        stage('Change permission & run the script file') {
             steps {
                 sh 'chmod +x sayhello.sh'
-            }
-        }
-        stage('run the script file') {
-            steps {
                 sh './sayhello.sh ${TOPIC_NAME} ${TARGET}'
             }
         }
