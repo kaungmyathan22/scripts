@@ -4,7 +4,7 @@ pipeline {
         string(name:'TOPIC_NAME', defaultValue:'Devops', description:'Topics to learn')
         string(name:'TARGET', defaultValue:'Dream Job', description:'Target goal')
     }
-    stags {
+    stages {
         stage('Clone the repo') {
             steps {
                 checkout scm
