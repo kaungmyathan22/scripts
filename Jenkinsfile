@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh "echo ${params.PERSON}"
                 sh 'chmod +x sayhello.sh'
-                sh "./sayhello.sh ${params.TOPIC_NAME} ${params.TARGET}"
+                sh "./sayhello.sh \"${params.TOPIC_NAME}\" \"${params.TARGET}\""
             }
         }
     }
