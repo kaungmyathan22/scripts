@@ -38,6 +38,7 @@ pipeline {
         }
         stage('Change permission & run the script file') {
             steps {
+                sh "echo ${params.PERSON}"
                 sh 'chmod +x sayhello.sh'
                 sh './sayhello.sh test name'
             }
