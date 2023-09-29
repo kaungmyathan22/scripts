@@ -14,7 +14,7 @@ pipeline {
         stage('Change permission & run the script file') {
             steps {
                 sh 'chmod +x sayhello.sh'
-                sh 'sayhello.sh ${TOPIC_NAME} ${TARGET}'
+                sh './sayhello.sh ${TOPIC_NAME} ${TARGET}'
             }
         }
     }
